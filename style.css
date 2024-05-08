@@ -1,0 +1,124 @@
+html {
+	background-color: #222831;
+	color: #eeeeee;
+	direction: rtl;
+}
+
+#grid {
+	display: grid;
+	grid-template-columns: repeat(
+		8,
+		minmax(90px, 1fr)
+	); /* Adjusted to ensure columns stay within a 90px grid */
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"hd hd hd hd hd hd hd hd"
+		"main main main main main main sd sd"
+		"ft ft ft ft ft ft ft ft";
+	gap: 10px; /* Adjust the gap between grid items if needed */
+}
+
+#grid > img {
+	grid-area: sd;
+	max-width: 300px; /* Set maximum width for the "sd" area */
+	width: 100%; /* Ensure image fills the available width */
+	border-radius: 22px;
+	margin: auto;
+	min-width: 0px;
+}
+
+#grid > h1 {
+	grid-area: hd;
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #abd7d9;
+}
+
+#list {
+	list-style-position: inside;
+	background-color: #31363f;
+	border-radius: 20px 0px 0px 0px;
+	font-size: 22px;
+	width: calc(100% - 90px);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+#list > li {
+	margin: 5px;
+}
+
+#list_div {
+	margin-right: 0px;
+	width: 100%;
+	grid-area: main;
+	text-align: right;
+	padding: 10px;
+}
+
+/* #image{
+    position: relative;
+    width: 85%;
+    height: 5px;
+    background-color: #76ABAE;
+    margin: auto;
+    grid-area: sd;
+    top: 130px;
+} */
+
+#foot {
+	grid-area: ft;
+	text-align: right;
+	margin-right: 10px;
+	background-color: #31363f;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	width: calc(100% - 50px);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	font-size: 22px;
+}
+
+/* #line{
+    grid-area: main;
+    width: 90%;
+    height: 5px;
+    background-color: #76ABAE;
+    position: relative;
+    top: 95%;
+    left: calc(10% - 10px); */
+
+#list2 {
+	list-style-position: inside;
+	background-color: #31363f;
+	font-size: 22px;
+	width: calc(100% - 90px);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+#list2 > li {
+	margin: 5px;
+}
+b {
+	color: #abd7d9 !important;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+li::marker {
+	color: #abd7d9;
+}
+li:hover {
+	transition: font-size 0.3s;
+	font-size: 26px;
+}
+
+#foot > h2 {
+	grid-area: hd;
+	text-decoration: underline;
+	text-decoration-color: #abd7d9;
+}
